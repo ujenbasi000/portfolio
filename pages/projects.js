@@ -8,6 +8,10 @@ const ProjectPage = () => {
     <>
       <Head>
         <title>Projects</title>
+        <meta
+          name="description"
+          content="All the webpages, websites and applications I've created."
+        />
       </Head>
       <section className="container mx-auto px-6">
         <header className="my-28 w-full lg:w-8/12 mx-auto text-center">

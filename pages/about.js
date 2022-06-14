@@ -7,6 +7,11 @@ const about = () => {
     <>
       <Head>
         <title>About</title>
+        {/* add seo */}
+        <meta
+          name="description"
+          content="Read about how I got started as a front end developer, my experience, skills and tech stack."
+        />
       </Head>
       <header className="flex items-center justify-center px-6 container mx-auto">
         <div className="text-white pt-20">
@@ -62,7 +67,7 @@ const about = () => {
           ease: "easeInOut",
           delay: 1.2,
         }}
-        className="container mx-auto px-6 py-10 text-white"
+        className="container mx-auto px-6 py-10 text-white text-justify"
       >
         <p className="text-gray-300 text-xl my-6">
           My interest on web development started back in 2019 during lockdown. I
