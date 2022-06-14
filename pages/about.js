@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { GetInTouch } from "../components/Home";
+import { motion } from "framer-motion";
 
 const about = () => {
   return (
@@ -9,15 +10,60 @@ const about = () => {
       </Head>
       <header className="flex items-center justify-center px-6 container mx-auto">
         <div className="text-white pt-20">
-          <h2 className="text-xl font-medium text-gray-200 mb-6 text-center">
+          <motion.h2
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              ease: "easeInOut",
+              delay: 0.8,
+            }}
+            className="text-xl font-medium text-gray-200 mb-6 text-center"
+          >
             Hi there,
-          </h2>
-          <h1 className="text-5xl font-semibold mb-10 text-center">
+          </motion.h2>
+          <motion.h1
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            className="text-5xl font-semibold mb-10 text-center"
+          >
             My name is Ujen Basi.
-          </h1>
+          </motion.h1>
         </div>
       </header>
-      <section className="container mx-auto px-6 py-10 text-white">
+      <motion.section
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+          delay: 1.2,
+        }}
+        className="container mx-auto px-6 py-10 text-white"
+      >
         <p className="text-gray-300 text-xl my-6">
           My interest on web development started back in 2019 during lockdown. I
           really enjoyed learning HTML, CSS, Javascript. I am always curious
@@ -70,8 +116,8 @@ const about = () => {
             </li>
           </ul>
         </div>
-      </section>
-      <GetInTouch />
+      </motion.section>
+      <GetInTouch delayStarting={1.6} />
     </>
   );
 };

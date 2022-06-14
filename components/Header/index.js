@@ -3,7 +3,7 @@ import MainHeader from "./MainHeader";
 
 const Header = () => {
   return (
-    <header className="bg-secondary">
+    <header className="dark:bg-secondary bg-[#ccc]">
       <InfoHeader />
       <MainHeader />
     </header>

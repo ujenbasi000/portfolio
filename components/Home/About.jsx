@@ -1,7 +1,35 @@
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 const About = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const boxVariant = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 25 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
     <div className="container mx-auto px-6">
-      <div className="w-full xl:w-9/12 mx-auto py-6">
+      <motion.div
+        variants={boxVariant}
+        initial="hidden"
+        animate={control}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+          // delay: 0.3,
+        }}
+        className="w-full xl:w-9/12 mx-auto py-6"
+      >
         <h1 className="text-4xl font-semibold text-white mb-8">
           👋 Hello, I&apos;m Ujen Basi
         </h1>
@@ -11,7 +39,7 @@ const About = () => {
           development started back in 2019 during lockdown.
         </p>
 
-        <p className="mt-6 text-gray-100 text-xl mb-4">
+        <p ref={ref} className="mt-6 text-gray-100 text-xl mb-4">
           Here are a few technologies I&apos;ve been working with recently:
         </p>
         <ul className="tech-grid">
@@ -38,7 +66,7 @@ const About = () => {
             <span className="text-gray-100 text-xl mb-4">Graphql</span>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };

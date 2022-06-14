@@ -1,9 +1,41 @@
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, delayStarting = 0.3 }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const boxVariant = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 25 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      console.log(true);
+      control.start("visible");
+    } else {
+      console.log(false);
+    }
+  }, [control, inView]);
+
   return (
-    <div className="py-10 card">
-      <Link href={project.link}>
+    <motion.div
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+        delay: delayStarting + 0.1,
+      }}
+      div
+      className="py-10 card"
+    >
+      <a target="_blank" rel="noreferrer" href={project.link}>
         <div className="cursor-pointer">
           <div className="relative image-parent">
             <div className="image"></div>
@@ -15,7 +47,7 @@ const ProjectCard = ({ project }) => {
             />
           </div>
         </div>
-      </Link>
+      </a>
       <div className="card-content mt-10 lg:mt-0">
         <Link href={project.link}>
           <h1 className="text-3xl mb-4 font-semibold text-gray-200 cursor-pointer hover:text-gray-300 transition duration-150">
@@ -36,11 +68,11 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         <div className="flex gap-3 items-center mt-6">
-          <button className="px-3 py-2 rounded-full">
+          {/* <button className="px-3 py-2 rounded-full">
             <a rel="noreferrer" target="_blank" href={project.link}>
               <i className="uil uil-external-link-alt text-2xl text-white hover:text-primary transition duration-200 " />
             </a>
-          </button>
+          </button> */}
           <button className="px-3 py-2 rounded-full">
             <a rel="noreferrer" target="_blank" href={project.link}>
               <i className="uil uil-github-alt text-white text-2xl hover:text-primary transition duration-200" />
@@ -48,7 +80,7 @@ const ProjectCard = ({ project }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -11,16 +11,16 @@ const MobileHeader = () => {
         </button>
         <button className="text-white font-medium relative text-inverted text-center">
           <i className="block text-xl uil uil-user-md"></i>{" "}
-          <Link href="/"> About </Link>
+          <Link href="/about"> About </Link>
         </button>
         <button className="text-white font-medium relative text-inverted text-center">
           <i className="block text-xl uil uil-lightbulb-alt"></i>{" "}
-          <Link href="/"> Projects </Link>
+          <Link href="/projects"> Projects </Link>
         </button>
-        <button className="text-white font-medium relative text-inverted text-center">
+        {/* <button className="text-white font-medium relative text-inverted text-center">
           <i className="block text-xl uil uil-bars"></i>{" "}
           <Link href="/"> Menu </Link>
-        </button>
+        </button> */}
       </nav>
     </div>
   );
