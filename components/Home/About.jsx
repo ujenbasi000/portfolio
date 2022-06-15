@@ -28,7 +28,7 @@ const About = () => {
           ease: "easeInOut",
           // delay: 0.3,
         }}
-        className="w-full xl:w-9/12 mx-auto py-6"
+        className="w-full xl:w-9/12 mx-auto py-6 lg:w-11/12"
       >
         <h1 className="text-4xl font-semibold text-white mb-8">
           👋 Hello, I&apos;m Ujen Basi

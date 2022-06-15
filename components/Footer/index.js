@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 const Footer = () => {
   return (
-    <footer className="container mx-auto py-6 px-6">
+    <footer className="container mx-auto px-6 footer">
       <p className="text-center text-white text-md mb-4">
         Design & built by Ujen Basi
       </p>

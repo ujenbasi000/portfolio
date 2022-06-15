@@ -85,6 +85,10 @@
   opacity: 1;
 }
 
+footer {
+  padding: 1rem 0 1rem 0;
+}
+
 @media screen and (max-width: 768px) {
   .parent {
     -ms-grid-columns: 1fr;
@@ -100,6 +104,9 @@
   .card {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  footer {
+    padding: 1rem 0 7rem 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

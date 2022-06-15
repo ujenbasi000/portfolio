@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+// import PDF from "/resume.pdf";
 
 const Hero = () => {
   return (
@@ -57,7 +58,9 @@ const Hero = () => {
             }}
             className="block mx-auto text-white btn-call-to-action-p tracking-wider text-lg"
           >
-            Resume
+            <a href={"/resume.pdf"} rel="noopener noreferrer" target="_blank">
+              Resume
+            </a>
           </motion.button>
         </div>
       </div>
