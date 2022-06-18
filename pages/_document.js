@@ -15,7 +15,12 @@ export default function Document() {
           rel="stylesheet"
         ></link>
         {/* icon */}
-        <link rel="icon" href="/developer-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon.png"
+        ></link>
         <link
           rel="stylesheet"
           href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"

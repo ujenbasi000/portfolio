@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -21,6 +22,14 @@ const ProjectCard = ({ project, delayStarting = 0.3 }) => {
     }
   }, [control, inView]);
 
+  const getWidth = () => {
+    if (window.innerWidth > "1028") {
+      return 530;
+    } else {
+      return;
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -36,14 +45,17 @@ const ProjectCard = ({ project, delayStarting = 0.3 }) => {
       className="py-10 card"
     >
       <a target="_blank" rel="noreferrer" href={project.link}>
-        <div className="cursor-pointer">
-          <div className="relative image-parent">
+        <div className="cursor-pointer border border-gray-700 rounded-md">
+          <div className="relative image-parent w-full h-64 sm:h-80 md:h-[26rem] lg:w-[330px] lg:h-[330px]">
             <div className="image"></div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="w-full object-fit rounded-md"
+            <Image
+              className="object-fit rounded-md"
               src={project.image}
               alt={project.title}
+              layout="fill"
+              placeholder="blur"
+              blurDataURL={project.image}
             />
           </div>
         </div>

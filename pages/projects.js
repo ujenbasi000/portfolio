@@ -63,7 +63,7 @@ const ProjectPage = () => {
             . All small to medium projects are listed here.
           </motion.p>
         </header>
-        <main>
+        <main className=" w-full lg:w-10/12 mx-auto">
           {projects.map((project) => (
             <ProjectCard delayStarting={1} project={project} key={project.id} />
           ))}

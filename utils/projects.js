@@ -2,9 +2,9 @@ export const projects = [
   {
     id: "as4dc857s5158",
     title: "Hashnode Clone",
-    description: "This is a project description",
-    image:
-      "https://www.datocms-assets.com/38195/1638789056-www-pigeonloans-io-macbook-pro-2.png?dpr=0.75&fm=webp",
+    description:
+      "I have build this project which is a clone of a popular developer bloging site. I have implemented many features such as create, like posts, You can also create tags, get popular tags, etc. You can check the code in my github.",
+    image: "/assets/hashnode.png",
     link: "https://github.com/ujenbasi000/Hashnode",
     techStack: [
       "NEXTJS",
@@ -18,9 +18,9 @@ export const projects = [
   {
     id: "as6dfg46we8r4",
     title: "Pinterest Clone",
-    description: "This is a project description",
-    image:
-      "https://www.datocms-assets.com/38195/1606389281-portman-home.png?dpr=0.75&fm=webp",
+    description:
+      "A simple pinterest clone. It has simple features. I wanted to make it simple so there are no advance features. ",
+    image: "/assets/pininterest.png",
     link: "https://github.com/ujenbasi000/pinme",
     techStack: ["REACTJS", "MONGODB", "EXPRESSJS", "CLOUDINARY", "REST API"],
   },
@@ -29,8 +29,7 @@ export const projects = [
     title: "Portfolio Website",
     description:
       "This is the first version of my portfolio website. I wanted to keep it basic and simple. Animations are done using framer-motion library",
-    image:
-      "https://www.datocms-assets.com/38195/1621499794-feedhive-io-macbook-pro-3.png?dpr=0.75&fm=webp",
+    image: "/assets/portfolio.png",
     link: "https://github.com/ujenbasi000/portfolio",
     techStack: ["REACT", "FRAMER-MOTION", "TAILWINDCSS"],
   },
