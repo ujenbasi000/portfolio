@@ -7,7 +7,8 @@ const about = () => {
     <>
       <Head>
         <title>About</title>
-        {/* add seo */}
+        <meta name="title" content="About:Ujen Basi" />
+
         <meta
           name="description"
           content="Read about how I got started as a front end developer, my experience, skills and tech stack."

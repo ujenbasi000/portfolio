@@ -8,6 +8,8 @@ const ProjectPage = () => {
     <>
       <Head>
         <title>Projects</title>
+        <meta name="title" content="Projects: Ujen Basi" />
+
         <meta
           name="description"
           content="All the webpages, websites and applications I've created."
